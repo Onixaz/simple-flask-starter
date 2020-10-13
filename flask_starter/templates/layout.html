@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <meta charset="utf-8">
+  <meta name="description" content="{{description}}">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+</head>
+
+<body>
+  <!--Nav/Header-->
+  {% include 'navigation.html' %}
+  <!--Flask Flashes-->
+
+  {% block content %}{% endblock %}
+  <!--Footer-->
+</body>
+
+</html>

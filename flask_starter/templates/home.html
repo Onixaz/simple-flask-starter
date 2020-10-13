@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>{{description}}</h1>
+
+
+  
+
+  <!--Flashes-->
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <ul class=flashes>
+    {% for message in messages %}
+    <h4>{{ message }}</h4>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+  <!--Content-->
+
+  {% if users %}
+  {% for user in users %}
+  <ul id="user.username">
+    <li>
+      <span class="field-name">User:</span>
+      <span class="field-value">{{ user.username }}</span>
+    </li>
+    <li>
+      <span class="field-name">Email:</span>
+      <span class="field-value">{{ user.email }}</span>
+    </li>
+
+  </ul>
+  {% endfor %}
+  {% endif %}
+</div>
+{% endblock %}

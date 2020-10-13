@@ -1,6 +1,9 @@
+
+
 body {
     margin: 0;
     font-family: sans-serif;
+    
 }
 
 nav {
@@ -21,4 +24,8 @@ nav a {
 
 h1 {
     margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
 }
